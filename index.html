@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>הפרויקטים שלי</title>
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-glow" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="#top"><span class="brand-dot"></span><span id="brandName"></span></a>
+  <nav class="topnav">
+    <a href="#featured">נבחרים</a>
+    <a href="#projects">כל הפרויקטים</a>
+    <a href="#skills">טכנולוגיות</a>
+    <button id="themeBtn" class="icon-btn" title="מצב בהיר / כהה" aria-label="החלפת ערכת צבעים">◐</button>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow"><span class="pulse"></span><span id="role"></span></p>
+      <h1 id="heroName"></h1>
+      <p class="intro" id="intro"></p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#featured">לפרויקטים ↓</a>
+        <a class="btn ghost" id="ghHero" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div class="hero-art" id="heroArt" aria-hidden="true"></div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+  <section id="featured" class="section">
+    <div class="section-title"><span class="kicker">01</span><h2>פרויקטים נבחרים</h2></div>
+    <div id="featuredList"></div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-head">
+      <div class="section-title"><span class="kicker">02</span><h2>כל הפרויקטים</h2></div>
+      <div class="search"><input id="search" type="search" placeholder="חיפוש פרויקט או טכנולוגיה…  (/)" aria-label="חיפוש"></div>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>לא נמצאו פרויקטים. נסי מילה אחרת 🙂</p>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="section-title"><span class="kicker">03</span><h2>ארגז הכלים</h2></div>
+    <div class="skill-groups" id="skillGroups"></div>
+  </section>
+
+</main>
+
+<footer class="footer"><span id="footName"></span></footer>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button class="icon-btn close" data-close aria-label="סגירה">✕</button>
+    <div class="gallery">
+      <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span id="mUrl"></span></div>
+        <div class="browser-view"><img id="mImg" alt=""></div></div>
+      <button class="nav prev" id="gPrev" aria-label="הקודמת">›</button>
+      <button class="nav next" id="gNext" aria-label="הבאה">‹</button>
+    </div>
+    <p class="caption" id="mCap"></p>
+    <div class="thumbs" id="mThumbs"></div>
+    <div class="modal-body">
+      <div class="tags"><span class="tag-cat" id="mCat"></span></div>
+      <h3 id="mTitle"></h3>
+      <p class="sub" id="mSub"></p>
+      <div class="mstats" id="mStats"></div>
+      <p id="mSummary"></p>
+      <ul id="mDetails"></ul>
+      <div class="techs" id="mTech"></div>
+      <div class="links" id="mLinks"></div>
+    </div>
+  </article>
+</div>
+
+<div class="lightbox" id="lightbox" hidden><img id="lbImg" alt=""></div>
+
+<script src="projects.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
